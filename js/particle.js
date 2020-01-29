@@ -1,7 +1,7 @@
 class Particle{
     constructor(x,y,radius){
         var options = {
-            restitution: 0.6,
+            restitution: 0.5,
             friction: 0
         }
         this.body = Bodies.circle(x,y,radius,options);
@@ -9,14 +9,20 @@ class Particle{
         this.radius = radius;
         World.add(world, this.body);
     }
-    
-    removeParticles(){
+
+    isOffScreen(){
+        var pos = this.body.position;
+        return(pos.y > 800)
+    }
+
+    remove(){
         World.remove(world, this.body);
     }
 
     display(){
         var pos = this.body.position;
         push();
+        colorMode(HSB);
         noStroke();
         translate(pos.x,pos.y);
         //fill(this.hue, saturation, brightness)
