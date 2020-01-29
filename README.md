@@ -1,4 +1,4 @@
 # This is Plinko
-Prototype for Silicon Valley
+<p>Prototype for Silicon Valley</p>
 Not yet finished
 Working on lag issue
