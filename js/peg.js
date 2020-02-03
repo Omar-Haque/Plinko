@@ -1,5 +1,5 @@
 class Peg{
-    constructor(x,y,radius){
+    constructor(x,y,radius,color){
         var options = {
             isStatic: true,
             restitution: 1.0
@@ -7,6 +7,8 @@ class Peg{
         this.body = Bodies.circle(x,y,radius,options);
         this.hue = random(240);
         this.radius = radius;
+        this.color = color;
+        this.body.label = "peg";
         World.add(world,this.body);
     }
     display(){
@@ -14,7 +16,7 @@ class Peg{
         push();
         colorMode(HSB);
         translate(pos.x,pos.y);
-        fill(this.hue, 255, 255);
+        fill(this.color, 255, 255);
         noStroke();
         ellipse(0,0,this.radius*2);
         pop();
