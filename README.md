@@ -1,2 +1,2 @@
 # Plinko
-Use this link - https://witchesme.github.io/Plinko/
+Use this link - https://omar-haque.github.io/Plinko/
