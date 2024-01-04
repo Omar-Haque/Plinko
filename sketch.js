@@ -63,7 +63,7 @@ function draw() {
   
   
   background(20,36,82);
-  Engine.update(engine, 25);
+  Engine.update(engine, 60);
   for(var i = 0; i < particles.length; i++){
       particles[i].display();
       
